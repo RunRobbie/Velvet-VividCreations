@@ -536,6 +536,30 @@ header,.header,.topbar,.notice-bar{border-color:rgba(244,235,227,.08) !important
   #app .vv-benefits>div{border-right:0 !important;border-bottom:1px solid rgba(244,235,227,.10) !important;}
   #app .vv-benefits>div:last-child{border-bottom:0 !important;}
 }
+</style><style>
+/* Final mineral background: detailed approved image, anchored to viewport, no page-length stretching. */
+html { background:#090709 !important; }
+body { position:relative; isolation:isolate; background:#090709 !important; }
+body::before {
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background-color:#090709;
+  background-image:linear-gradient(90deg,rgba(7,5,7,.35),rgba(7,5,7,.18)),url("dark-mineral-texture.webp");
+  background-position:center center; background-size:cover; background-repeat:no-repeat;
+}
+body, #app { background-image:none !important; background-color:transparent !important; }
+#app .pagehero, #app .section-light, #app .section-cream,
+#app .section-dark, #app .vv-textured, #app .cta-band {
+  background:transparent !important; border-top:0 !important; border-bottom:0 !important;
+}
+#app .pagehero h1, #app .section-light h2, #app .section-cream h2 { color:#f8ede5 !important; }
+#app .pagehero p, #app .section-light p, #app .section-cream p {color:#ead8cf !important;}
+#app .gallery-inspiration, #app .service-line, #app .vv-contact-form,
+#app .vv-account-section .auth-wrap { background-color:rgba(12,9,11,.96) !important; }
+#app .vv-benefits>div {border-right-color:rgba(226,181,154,.1) !important;}
+@media(max-width:820px) {
+ body::before {background-position:center; background-size:cover;}
+ #app .vv-benefits>div {border-right:0 !important;}
+}
 </style></head><body><div id="site-shell">
   <div class="topbar"><span>Luxury hair artistry</span><span class="topbar-mid">Melbourne, Florida · By appointment only</span><span>Made personal. Made beautiful.</span></div>
   <header class="header"><a href="#/" class="brand brand-compact" aria-label="Velvet and Vivid Creations home" title="Velvet &amp; Vivid Creations"><span>VELVET <em>&amp;</em> VIVID</span><small>CREATIONS</small></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
