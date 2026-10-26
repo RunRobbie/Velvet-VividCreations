@@ -1,7 +1,6 @@
-Velvet & Vivid Creations | GitHub Pages luxury preview
+Velvet & Vivid Creations GitHub Pages self-contained update
 
-Unzip and upload ALL files in this archive directly into the repository root, including .nojekyll. Keep filenames unchanged. Set GitHub Pages source to main branch / (root).
+Upload index.html and .nojekyll directly to the root of your main branch, replacing index.html.
+All required artwork, background texture, and eight illustrative gallery images are embedded in index.html. Existing image files may remain, but are not required by this update.
 
-This is a static INTERACTIVE DEMONSTRATION, not a production backend. Booking requests, account features, payments, and contact form are not delivered to a real salon.
-
-Gallery contains illustrative mockup samples, not documented client results. Replace them with consented real client photography prior to public production use.
+This is a static demo: no real booking, payments, or client login.
