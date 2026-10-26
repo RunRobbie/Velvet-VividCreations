@@ -287,6 +287,45 @@ img,svg,video{max-width:100%}
 .visual-panel:after {content:none!important;display:none!important;}
 @media(max-width:600px){.header .brand-compact{max-width:min(68vw,250px);min-height:46px}.header .brand-compact span{font-size:clamp(18px,5vw,25px)!important}.header .brand-compact small{font-size:8px;letter-spacing:.3em}}
 @media(max-width:360px){.header .brand-compact span{font-size:17px!important}.header .brand-compact small{font-size:7px}}
+
+/* v1.2 accessibility and layout refinements */
+.section-cream{
+  background: linear-gradient(180deg,#140c10 0%,#0b0709 100%);
+  color: var(--ivory);
+}
+.section-cream .intro-grid{
+  grid-template-columns: minmax(280px,.84fr) minmax(360px,1fr);
+  gap: clamp(34px,4vw,58px);
+  align-items: center;
+}
+.section-cream .visual-panel{
+  width: 100%;
+  max-width: 720px;
+  height: clamp(320px,33vw,400px);
+  justify-self: start;
+  border: 1px solid rgba(150,76,79,.65);
+  box-shadow: 0 22px 50px rgba(0,0,0,.34);
+}
+.section-cream .intro-copy{
+  max-width: 640px;
+}
+.section-cream .eyebrow{
+  color:#e0ad98;
+}
+.section-cream h2{
+  color:#f7ebe2;
+  text-shadow:0 1px 0 rgba(0,0,0,.2);
+}
+.section-cream p{
+  color:#dcc9c0;
+}
+.section-cream .line{
+  background:#d9a58d;
+}
+@media(max-width:820px){
+  .section-cream .intro-grid{grid-template-columns:1fr;gap:30px}
+  .section-cream .visual-panel{max-width:none;height:300px}
+}
 </style></head><body><div id="site-shell">
   <div class="topbar"><span>Luxury hair artistry</span><span class="topbar-mid">Melbourne, Florida · By appointment only</span><span>Made personal. Made beautiful.</span></div>
   <header class="header"><a href="#/" class="brand brand-compact" aria-label="Velvet and Vivid Creations home" title="Velvet &amp; Vivid Creations"><span>VELVET <em>&amp;</em> VIVID</span><small>CREATIONS</small></a><button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
@@ -401,7 +440,7 @@ async function post(path,data){return api(path,{method:'POST',body:data})}
 function pagehero(kicker,title,desc){return `<section class="pagehero"><div class="container"><div class="eyebrow">${esc(kicker)}</div><h1>${title}</h1><p>${desc}</p></div></section>`}
 function sectionCTA(){return `<section class="cta-band"><div class="container"><div class="eyebrow">The next chapter for your hair</div><h2>Something beautiful begins here.</h2><p>Thoughtful artistry, carefully crafted around you.</p><a class="btn" href="#/book">Request Your Appointment <span>↗</span></a></div></section>`}
 function servicesMarkup(limit){const arr=limit?state.services.slice(0,limit):state.services;return `<div class="${limit?'cards3':'services-list'}">${arr.map((s,i)=>limit?`<article class="service-card"><div class="service-art">0${i+1} </div><div class="service-body"><div class="eyebrow">${esc(s.category)}</div><h3>${esc(s.name)}</h3><p>${esc(s.description)}</p><div class="service-meta"><span>From ${dollars(s.price_cents)}</span><span>${s.duration} min</span></div><button class="btn btn-dark" data-action="book-service" data-id="${s.id}">Request Service ↗</button></div></article>`:`<article class="service-line"><div class="details"><div><div class="eyebrow">${esc(s.category)}</div><h3>${esc(s.name)}</h3></div><div class="price">From ${dollars(s.price_cents)}</div></div><p>${esc(s.description)}</p><div class="filters-line"><span class="tiny">${s.duration} minutes · Final pricing confirmed at consultation</span><button class="btn btn-dark btn-small" data-action="book-service" data-id="${s.id}">Request appointment ↗</button></div></article>`).join('')}</div>`}
-function home(){return `<section class="hero"><div class="hero-frame"><img class="hero-img" src="velvet-vivid-hero.webp" alt="Velvet and Vivid Creations. Luxury Hair Artistry. Champagne serif lettering on black with burgundy velvet on the left."><div class="hero-mobile-lockup" aria-hidden="true"><span class="hero-mobile-name">VELVET <em>&amp;</em> VIVID</span><span class="hero-mobile-creation">CREATIONS</span><span class="hero-mobile-descriptor">LUXURY HAIR ARTISTRY</span></div></div><div class="hero-action"><p>Luxury hair artistry · Melbourne, Florida · By appointment</p><a class="btn" href="#/book">Request Your Appointment <span>↗</span></a></div></section><section class="section-dark"><div class="container pillar-row"><div class="pillar"><span class="pillar-icon">✦</span> Individual artistry</div><div class="pillar"><span class="pillar-icon">♡</span> Hair health first</div><div class="pillar"><span class="pillar-icon">✧</span> Personal consultations</div><div class="pillar"><span class="pillar-icon">✳</span> A luxury experience</div></div></section><section class="section section-light"><div class="container"><div class="section-header"><div><div class="eyebrow">Curated for you</div><h2>Services with <span class="accent-text">intention.</span></h2></div><a href="#/services" class="btn btn-outline">Explore all services ↗</a></div>${servicesMarkup(3)}</div></section><section class="section section-cream"><div class="container intro-grid"><div class="visual-panel" role="img" aria-label="Deep maroon velvet fabric"></div><div><div class="eyebrow">Welcome to Velvet & Vivid</div><h2>Your hair. Your individuality. <span class="accent-text">Your story.</span></h2><div class="line"></div><p>At Velvet & Vivid Creations, beautiful hair begins with listening. Every appointment is a thoughtful collaboration, pairing technical artistry with your personality, lifestyle, and the health of your hair.</p><p>Expect a tailored experience, an unhurried conversation, and a look that feels distinctly yours.</p><a href="#/about" class="btn btn-dark mt">Discover our approach ↗</a></div></div></section><section class="quote-strip"><div class="eyebrow">Velvet & Vivid Creations</div><h2>“Artistry with intention. Confidence without compromise.”</h2></section>${sectionCTA()}`}
+function home(){return `<section class="hero"><div class="hero-frame"><img class="hero-img" src="velvet-vivid-hero.webp" alt="Velvet and Vivid Creations. Luxury Hair Artistry. Champagne serif lettering on black with burgundy velvet on the left."><div class="hero-mobile-lockup" aria-hidden="true"><span class="hero-mobile-name">VELVET <em>&amp;</em> VIVID</span><span class="hero-mobile-creation">CREATIONS</span><span class="hero-mobile-descriptor">LUXURY HAIR ARTISTRY</span></div></div><div class="hero-action"><p>Luxury hair artistry · Melbourne, Florida · By appointment</p><a class="btn" href="#/book">Request Your Appointment <span>↗</span></a></div></section><section class="section-dark"><div class="container pillar-row"><div class="pillar"><span class="pillar-icon">✦</span> Individual artistry</div><div class="pillar"><span class="pillar-icon">♡</span> Hair health first</div><div class="pillar"><span class="pillar-icon">✧</span> Personal consultations</div><div class="pillar"><span class="pillar-icon">✳</span> A luxury experience</div></div></section><section class="section section-light"><div class="container"><div class="section-header"><div><div class="eyebrow">Curated for you</div><h2>Services with <span class="accent-text">intention.</span></h2></div><a href="#/services" class="btn btn-outline">Explore all services ↗</a></div>${servicesMarkup(3)}</div></section><section class="section section-cream"><div class="container intro-grid"><div class="visual-panel" role="img" aria-label="Deep maroon velvet fabric"></div><div class="intro-copy"><div class="eyebrow">Welcome to Velvet & Vivid</div><h2>Your hair. Your individuality. <span class="accent-text">Your story.</span></h2><div class="line"></div><p>At Velvet & Vivid Creations, beautiful hair begins with listening. Every appointment is a thoughtful collaboration, pairing technical artistry with your personality, lifestyle, and the health of your hair.</p><p>Expect a tailored experience, an unhurried conversation, and a look that feels distinctly yours.</p><a href="#/about" class="btn btn-dark mt">Discover our approach ↗</a></div></div></section><section class="quote-strip"><div class="eyebrow">Velvet & Vivid Creations</div><h2>“Artistry with intention. Confidence without compromise.”</h2></section>${sectionCTA()}`}
 function servicesPage(){return pagehero('The experience','Luxury Services','A curated selection of services tailored to your hair goals. Prices and durations below are examples until the final menu is confirmed.')+`<section class="section section-light"><div class="container">${servicesMarkup(0)}<p class="tiny mt">Prices are illustrative starting prices and may change following consultation. Appointment requests require approval.</p></div></section>`+sectionCTA()}
 async function gallery(){const {photos}=await api('/api/gallery');return pagehero('Our work','The Art of Transformation','Real client work will appear here after it is uploaded and explicitly approved for public sharing.')+`<section class="section section-dark"><div class="container">${photos.length?`<div class="gallery">${photos.map(p=>`<article class="gallery-item"><img src="/media/${p.id}" alt="${esc(p.caption||'Salon portfolio photo')}" loading="lazy"><span>${esc(p.caption||'Velvet & Vivid Creations')}</span></article>`).join('')}</div>`:`<div class="gallery-placeholder"><div class="eyebrow">Gallery coming soon</div><h3>Every transformation tells a story.</h3><p>Client portfolio photographs will be displayed once they are available and consent has been documented. No fabricated client results are displayed.</p><a href="#/book" class="btn mt">Plan your transformation ↗</a></div>`}</div></section>`+sectionCTA()}
 function about(){return pagehero('Our philosophy','Beauty Is Personal','An elevated, one-on-one hair experience centered on your vision.')+`<section class="section section-light"><div class="container intro-grid"><div><div class="eyebrow">Artistry over ordinary</div><h2>Refined hair, <span class="accent-text">authentic confidence.</span></h2><div class="line"></div><p>At Velvet & Vivid Creations, every detail matters. From an in-depth conversation about your goals to a customized service plan, the experience is intentionally personal.</p><p>Our approach balances wearable beauty, expressive artistry, and the long-term health of your hair.</p><p>Based in Melbourne, Florida. Appointments are requested online and personally approved to allow time for each client.</p><a class="btn btn-dark mt" href="#/book">Request a consultation ↗</a></div><div class="visual-panel"></div></div></section>`+sectionCTA()}
