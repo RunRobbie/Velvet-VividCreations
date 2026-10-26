@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: velvet-vivid-creations
+    runtime: docker
+    plan: starter
+    autoDeployTrigger: off
+    healthCheckPath: /api/services
+    disk:
+      name: velvet-vivid-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: PORT
+        value: 8000
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: REQUIRE_ADMIN_2FA
+        value: "1"
+      - key: ADMIN_TOTP_SECRET
+        sync: false

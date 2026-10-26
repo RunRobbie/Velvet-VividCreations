@@ -1,0 +1,10 @@
+data
+screenshots
+tests
+__pycache__
+*.sqlite3
+*.log
+*.zip
+.env*
+.git
+collateral
