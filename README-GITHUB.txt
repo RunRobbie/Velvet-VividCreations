@@ -1,5 +1,7 @@
-Velvet & Vivid Creations | GitHub Pages static preview
+Velvet & Vivid Creations | GitHub Pages luxury preview
 
-All files in this ZIP are at repository root. Extract and upload index.html, velvet-vivid-hero.webp, velvet-texture.webp, and .nojekyll to the root of the main branch. In GitHub Pages, set branch main, /(root). README is optional.
+Unzip and upload ALL files in this archive directly into the repository root, including .nojekyll. Keep filenames unchanged. Set GitHub Pages source to main branch / (root).
 
-The approved luxury artwork and dark theme are retained. Header and service cards use the full brand name, never V & V initials. Bookings, authentication and payments are demonstration only; no live backend.
+This is a static INTERACTIVE DEMONSTRATION, not a production backend. Booking requests, account features, payments, and contact form are not delivered to a real salon.
+
+Gallery contains illustrative mockup samples, not documented client results. Replace them with consented real client photography prior to public production use.
