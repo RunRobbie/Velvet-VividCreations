@@ -9,3 +9,6 @@ Your GitHub Pages Gallery should display 6 images with only All, Cuts & styling,
 After committing your upload and allowing GitHub Pages to deploy, reload the Gallery page (hard refresh if needed).
 
 This is a static interactive preview, not a live booking/authentication backend.
+
+
+Update: service-haircut.webp, service-color-artistry.webp, and service-balayage.webp were replaced with new HD service card photos.
