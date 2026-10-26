@@ -1,1 +1,5 @@
-Velvet & Vivid Creations GitHub Pages update. Upload index.html, salon-tools.webp, contact-salon-tools.webp and .nojekyll to the repository root on main. All other assets and Gallery images are embedded inside index.html. Static interactive demo only: no real booking, email delivery, authentication or payments. Original website artwork and styling preserved with approved visual updates.
+Velvet & Vivid Creations - GitHub Pages background correction
+
+Upload index.html and dark-mineral-texture.webp to the main branch repository root. Keep salon-tools.webp and contact-salon-tools.webp at the root (both are also included in this ZIP). .nojekyll is included.
+
+All asset references are relative. This remains a static interactive demonstration.

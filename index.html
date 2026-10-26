@@ -267,6 +267,35 @@
 .vv-contact-info>p{color:#e8d6ce!important}
 .gallery-inspiration-grid{gap:18px!important}.gallery-inspiration{background:#110b0f;border:1px solid rgba(219,174,149,.3)!important;overflow:hidden}.gallery-inspiration img{display:block;width:100%;object-fit:cover}.gallery-filter{border-color:rgba(227,181,150,.5)!important}.gallery-filter.active{background:#e6b398!important;color:#180c11!important}
 @media(max-width:820px){.vv-benefits{grid-template-columns:1fr;gap:4px;margin-top:38px}.vv-benefits>div{border:0;border-bottom:1px solid rgba(218,171,148,.21)}.vv-benefits>div:last-child{border:0}.vv-story-art,.vv-contact-art{min-height:235px!important}}
+
+/* Background finish, approved Oct 26: one defined texture treatment for public-facing pages.
+   The mineral texture is bundled and deliberately not covered by opaque gradients. */
+:root { --vv-mineral-background: url("dark-mineral-texture.webp"); }
+body, #app { background-color:#0d090c; }
+#app .pagehero,
+#app .section-light,
+#app .section-cream,
+#app .section-dark,
+#app .vv-textured,
+#app .cta-band {
+  background-color:#100b0e !important;
+  background-image:linear-gradient(90deg,rgba(5,4,6,.29),rgba(7,4,6,.06) 72%),var(--vv-mineral-background) !important;
+  background-repeat:no-repeat,repeat !important;
+  background-position:center,center !important;
+  background-size:cover,1280px 840px !important;
+  color:#f5e8df !important;
+}
+#app .pagehero h1,#app .pagehero p {color:#f5e8df !important;}
+#app .section-light h1,#app .section-light h2,#app .section-light h3,
+#app .section-cream h1,#app .section-cream h2,#app .section-cream h3 {color:#f5e8df !important;}
+#app .section-light p,#app .section-cream p {color:#e4d3cc !important;}
+/* Cards retain their own contrast and the approved original hero photo stays untouched. */
+#app .service-line,#app .service-card,#app .booking-card,#app .auth-wrap {background-color:#151014 !important;}
+@media(max-width:700px){
+  #app .pagehero,#app .section-light,#app .section-cream,#app .section-dark,
+  #app .vv-textured,#app .cta-band {background-size:cover,1000px 656px !important;}
+}
+
 </style><style>#demo-bar{position:relative;z-index:25;background:#e2b5a1;color:#31121c;padding:8px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:.3px}#demo-bar .demo-actions{display:flex;gap:6px}#demo-bar a{background:#30101c;color:#fff5eb;padding:9px 12px;border-radius:4px;text-decoration:none;white-space:nowrap}#demo-bar a:focus-visible{outline:2px solid #31121c;outline-offset:2px}.header{top:0}@media(max-width:600px){#demo-bar{flex-wrap:wrap;justify-content:center;text-align:center;font-size:10px;padding:9px 12px}.demo-actions{width:100%;justify-content:center}#demo-bar a{padding:7px 12px}}</style>
 <style>.demo-disclaimer{text-align:center;font-size:11px;line-height:1.6;color:#cba994;padding:10px 20px 18px;margin:0}.hero-img{display:block;max-width:100%}</style><style id="pages-image-compat">
 @media (max-width:600px) {
