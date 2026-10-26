@@ -1,7 +1,5 @@
 Velvet & Vivid Creations | GitHub Pages static preview
 
-All files in this archive belong at repository ROOT (main branch). Upload the extracted files directly, not the ZIP or a folder. Configure GitHub Pages to Deploy from branch: main / (root).
+All files in this ZIP are at repository root. Extract and upload index.html, velvet-vivid-hero.webp, velvet-texture.webp, and .nojekyll to the root of the main branch. In GitHub Pages, set branch main, /(root). README is optional.
 
-Files: index.html (CSS and JavaScript embedded), velvet-vivid-hero.webp (approved v1.2 hero artwork), velvet-texture.webp (the original velvet texture), .nojekyll (GitHub Pages support).
-
-Preview limitations: This site runs entirely on static hosting. Booking, sign-in, management and payment interactions are illustrative, not connected to the production backend. No requests or payments are transmitted. The original hero artwork is now displayed consistently on narrow screens.
+The approved luxury artwork and dark theme are retained. Header and service cards use the full brand name, never V & V initials. Bookings, authentication and payments are demonstration only; no live backend.
