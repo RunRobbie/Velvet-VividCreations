@@ -1,6 +1,1 @@
-Velvet & Vivid Creations GitHub Pages self-contained update
-
-Upload index.html and .nojekyll directly to the root of your main branch, replacing index.html.
-All required artwork, background texture, and eight illustrative gallery images are embedded in index.html. Existing image files may remain, but are not required by this update.
-
-This is a static demo: no real booking, payments, or client login.
+Velvet & Vivid Creations GitHub Pages update. Upload index.html, salon-tools.webp, contact-salon-tools.webp and .nojekyll to the repository root on main. All other assets and Gallery images are embedded inside index.html. Static interactive demo only: no real booking, email delivery, authentication or payments. Original website artwork and styling preserved with approved visual updates.
