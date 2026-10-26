@@ -1,7 +1,5 @@
-Upload the files in this ZIP to the root of your GitHub repository, replacing the existing files with the same names.
+Velvet & Vivid Creations | GitHub Pages background revision
 
-Changed files in this package:
-- index.html
-- dark-mineral-texture.webp
+Upload index.html and dark-mineral-texture.webp to the root of your repository, replacing the previous versions. All other supporting files are included for convenience. No folders required.
 
-This update unifies the textured background across pages and removes the reddish divider lines between sections.
+Change: visible muted charcoal-burgundy mineral texture, matching full-width backgrounds, no reddish section dividers.
