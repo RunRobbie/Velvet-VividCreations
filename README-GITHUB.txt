@@ -1,5 +1,12 @@
-Velvet & Vivid Creations | GitHub Pages background revision
+Updated files for approved background match.
 
-Upload index.html and dark-mineral-texture.webp to the root of your repository, replacing the previous versions. All other supporting files are included for convenience. No folders required.
+Upload these files to the root of your GitHub repository, replacing the existing files with the same names.
 
-Change: visible muted charcoal-burgundy mineral texture, matching full-width backgrounds, no reddish section dividers.
+Most important changed files:
+- index.html
+- dark-mineral-texture.webp
+
+Also included for convenience:
+- salon-tools.webp
+- contact-salon-tools.webp
+- .nojekyll
